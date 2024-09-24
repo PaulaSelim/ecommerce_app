@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
           return IconButton(
             icon: const Icon(Icons.menu),
             color: Colors.black,
+            padding: const EdgeInsets.only(left: 16),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
@@ -55,22 +56,72 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.grey[300],
         width: MediaQuery.of(context).size.width * 0.85,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 64,
-              ),
-              IconButton(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 64,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 13),
+              child: IconButton(
                 icon: const Icon(Icons.close),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
-            ],
-          ),
+            ),
+            const Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text('Home'),
+                  ),
+                ),
+                Divider(
+                  color: Colors.black,
+                  thickness: 0.1,
+                  indent: 20,
+                  endIndent: 20,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: ListTile(
+                    leading: Icon(Icons.shopping_cart),
+                    title: Text('Cart'),
+                  ),
+                ),
+                Divider(
+                  color: Colors.black,
+                  thickness: 0.1,
+                  indent: 20,
+                  endIndent: 20,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: ListTile(
+                    leading: Icon(Icons.info),
+                    title: Text('About'),
+                  ),
+                ),
+              ],
+            ),
+            const Divider(
+              color: Colors.black,
+              thickness: 0.1,
+              indent: 20,
+              endIndent: 20,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 13),
+              child: ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Logout'),
+              ),
+            ),
+          ],
         ),
         //make the app background not get darkened when the drawer is opened
       ),
@@ -78,3 +129,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+      // IconButton(
+      //     icon: const Icon(Icons.close),
+      //     onPressed: () {
+      //     Navigator.of(context).pop();
+      //     },
+      // ),
+      // padding: const EdgeInsets.only(left: 13),
