@@ -40,6 +40,7 @@ class _HomePageState extends State<HomePage> {
         onTabChange: (index) => navigateBottomNavBar(index),
       ),
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Builder(builder: (context) {
