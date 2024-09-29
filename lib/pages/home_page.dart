@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import '../components/bottom_nav_bar.dart';
 import 'cart_page.dart';
@@ -72,6 +73,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 13),
@@ -93,6 +95,11 @@ class _HomePageState extends State<HomePage> {
                     title: Text('Cart'),
                   ),
                 ),
+              ],
+            ),
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
                 Divider(
                   color: Colors.black,
                   thickness: 0.1,
@@ -106,20 +113,33 @@ class _HomePageState extends State<HomePage> {
                     title: Text('About'),
                   ),
                 ),
+                Divider(
+                  color: Colors.black,
+                  thickness: 0.1,
+                  indent: 20,
+                  endIndent: 20,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings'),
+                  ),
+                ),
+                Divider(
+                  color: Colors.black,
+                  thickness: 0.1,
+                  indent: 20,
+                  endIndent: 20,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 13),
+                  child: ListTile(
+                    leading: Icon(Icons.logout),
+                    title: Text('Logout'),
+                  ),
+                ),
               ],
-            ),
-            const Divider(
-              color: Colors.black,
-              thickness: 0.1,
-              indent: 20,
-              endIndent: 20,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 13),
-              child: ListTile(
-                leading: Icon(Icons.logout),
-                title: Text('Logout'),
-              ),
             ),
           ],
         ),
