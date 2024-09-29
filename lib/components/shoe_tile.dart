@@ -26,10 +26,13 @@ class ShoeTile extends StatelessWidget {
             ),
           ),
           // description
-          Text(
-            shoe.description,
-            style: TextStyle(
-              color: Colors.grey[600],
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+            child: Text(
+              shoe.description,
+              style: TextStyle(
+                color: Colors.grey[600],
+              ),
             ),
           ),
           // price + details
