@@ -16,8 +16,9 @@ class IntroPage extends StatelessWidget {
               children: [
                 //logo
 
-                const SizedBox(
-                  height: 24,
+                SizedBox(
+                  // height: 24,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
 
                 Image.asset(
@@ -26,8 +27,9 @@ class IntroPage extends StatelessWidget {
                   width: 300,
                 ),
 
-                const SizedBox(
-                  height: 240,
+                SizedBox(
+                  // height: 240,
+                  height: MediaQuery.of(context).size.height * 0.28,
                 ),
 
                 //title
@@ -41,8 +43,9 @@ class IntroPage extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(
-                  height: 48,
+                SizedBox(
+                  // height: 48,
+                  height: MediaQuery.of(context).size.height * 0.06,
                 ),
 
                 //subtitle
@@ -56,8 +59,9 @@ class IntroPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
 
-                const SizedBox(
-                  height: 48,
+                SizedBox(
+                  // height: 48,
+                  height: MediaQuery.of(context).size.height * 0.06,
                 ),
 
                 //start now button
