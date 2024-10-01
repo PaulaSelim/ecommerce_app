@@ -79,7 +79,8 @@ class _ShopPageState extends State<ShopPage> {
 
           //list of shoes for sale
           SizedBox(
-            height: 350,
+            // height: 350,
+            height: MediaQuery.of(context).size.height * 0.45,
             child: Expanded(
               child: ListView.builder(
                 itemCount: 4,
