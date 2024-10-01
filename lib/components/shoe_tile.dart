@@ -9,7 +9,7 @@ class ShoeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 25.0),
-      width: 280,
+      width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(10),
