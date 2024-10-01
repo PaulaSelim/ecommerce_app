@@ -58,104 +58,76 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.grey[300],
         width: MediaQuery.of(context).size.width * 0.85,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 64,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 13),
-              child: IconButton(
-                icon: const Icon(Icons.close),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              ),
-            ),
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 13),
-                  child: ListTile(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.065,
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.close),
+                    splashColor: Colors.transparent,
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  const ListTile(
                     leading: Icon(Icons.home),
                     title: Text('Home'),
                   ),
-                ),
-                Divider(
-                  color: Colors.black,
-                  thickness: 0.1,
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 13),
-                  child: ListTile(
+                  const Divider(
+                    color: Colors.black,
+                    thickness: 0.1,
+                    indent: 20,
+                    endIndent: 20,
+                  ),
+                  const ListTile(
                     leading: Icon(Icons.shopping_cart),
                     title: Text('Cart'),
                   ),
-                ),
-              ],
-            ),
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Divider(
-                  color: Colors.black,
-                  thickness: 0.1,
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 13),
-                  child: ListTile(
+                ],
+              ),
+              Column(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const ListTile(
                     leading: Icon(Icons.info),
                     title: Text('About'),
                   ),
-                ),
-                Divider(
-                  color: Colors.black,
-                  thickness: 0.1,
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 13),
-                  child: ListTile(
+                  const Divider(
+                    color: Colors.black,
+                    thickness: 0.1,
+                    indent: 20,
+                    endIndent: 20,
+                  ),
+                  const ListTile(
                     leading: Icon(Icons.settings),
                     title: Text('Settings'),
                   ),
-                ),
-                Divider(
-                  color: Colors.black,
-                  thickness: 0.1,
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 13),
-                  child: ListTile(
+                  const Divider(
+                    color: Colors.black,
+                    thickness: 0.1,
+                    indent: 20,
+                    endIndent: 20,
+                  ),
+                  const ListTile(
                     leading: Icon(Icons.logout),
                     title: Text('Logout'),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.065,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-        //make the app background not get darkened when the drawer is opened
       ),
       body: _pages[_selectedIndex],
     );
   }
 }
-
-
-      // IconButton(
-      //     icon: const Icon(Icons.close),
-      //     onPressed: () {
-      //     Navigator.of(context).pop();
-      //     },
-      // ),
-      // padding: const EdgeInsets.only(left: 13),
