@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../modules/shoe.dart';
 
+// ignore: must_be_immutable
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
   void Function()? onTap;
