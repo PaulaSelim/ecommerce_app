@@ -19,6 +19,15 @@ class _CartItemState extends State<CartItem> {
   // remove item from cart
   void removeItemFromCart() {
     Provider.of<Cart>(context, listen: false).removeItem(widget.shoe);
+
+    //alert the user that the item was successfully deleted from the cart
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.grey[500],
+        content: Text('${widget.shoe.name} removed from cart'),
+        duration: const Duration(seconds: 2),
+      ),
+    );
   }
 
   @override
