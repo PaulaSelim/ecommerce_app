@@ -33,7 +33,7 @@ class _ShopPageState extends State<ShopPage> {
         children: [
           //search bar
           Container(
-            margin: const EdgeInsets.all(13),
+            margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.grey[100],
