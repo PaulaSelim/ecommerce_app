@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../modules/cart.dart';
 import '../modules/shoe.dart';
 
+// ignore: must_be_immutable
 class CartItem extends StatefulWidget {
   Shoe shoe;
   CartItem({
@@ -37,7 +38,7 @@ class _CartItemState extends State<CartItem> {
       title: Text(widget.shoe.name),
       subtitle: Text(widget.shoe.price),
       trailing: IconButton(
-        icon: Icon(Icons.delete),
+        icon: const Icon(Icons.delete),
         onPressed: removeItemFromCart,
       ),
     );
