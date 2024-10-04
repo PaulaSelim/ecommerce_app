@@ -1,7 +1,9 @@
+// main.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'modules/cart.dart';
 import 'pages/intro_page.dart';
+import 'utils/scroll_behavior.dart'; // Import the custom scroll behavior
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => Cart(),
-      builder: (context, child) => const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: IntroPage(),
+        home: const IntroPage(),
+        scrollBehavior: MyCustomScrollBehavior(),
       ),
     );
   }
