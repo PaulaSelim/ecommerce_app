@@ -41,21 +41,26 @@ class _HomePageState extends State<HomePage> {
         surfaceTintColor: Colors.transparent,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Builder(builder: (context) {
-          return IconButton(
-            icon: const Icon(Icons.menu),
-            color: Colors.black,
-            padding: const EdgeInsets.only(left: 16),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          );
-        }),
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              icon: const Icon(Icons.menu),
+              color: Colors.black,
+              padding: const EdgeInsets.only(left: 16),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
       ),
       drawerScrimColor: Colors.grey.withOpacity(0.55),
       drawer: Drawer(
         backgroundColor: Colors.grey[300],
-        width: MediaQuery.of(context).size.width * 0.85,
+        // width: MediaQuery.of(context).size.width * 0.85,
+        width: MediaQuery.of(context).size.width < 600
+            ? MediaQuery.of(context).size.width * 0.85
+            : 500,
         child: Padding(
           padding: const EdgeInsets.only(left: 10.0, right: 10.0),
           child: Column(
@@ -73,9 +78,15 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pop();
                     },
                   ),
-                  const ListTile(
-                    leading: Icon(Icons.home),
-                    title: Text('Home'),
+                  ListTile(
+                    leading: const Icon(Icons.home),
+                    title: const Text('Home'),
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 0; // Set to Home
+                      });
+                      Navigator.of(context).pop(); // Close the Drawer
+                    },
                   ),
                   const Divider(
                     color: Colors.black,
@@ -83,9 +94,15 @@ class _HomePageState extends State<HomePage> {
                     indent: 20,
                     endIndent: 20,
                   ),
-                  const ListTile(
-                    leading: Icon(Icons.shopping_cart),
-                    title: Text('Cart'),
+                  ListTile(
+                    leading: const Icon(Icons.shopping_cart),
+                    title: const Text('Cart'),
+                    onTap: () {
+                      setState(() {
+                        _selectedIndex = 1; // Set to Cart
+                      });
+                      Navigator.of(context).pop(); // Close the Drawer
+                    },
                   ),
                 ],
               ),
