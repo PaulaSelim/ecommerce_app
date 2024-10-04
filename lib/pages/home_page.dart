@@ -83,9 +83,9 @@ class _HomePageState extends State<HomePage> {
                     title: const Text('Home'),
                     onTap: () {
                       setState(() {
-                        _selectedIndex = 0; // Set to Home
+                        _selectedIndex = 0;
                       });
-                      Navigator.of(context).pop(); // Close the Drawer
+                      Navigator.of(context).pop();
                     },
                   ),
                   const Divider(
@@ -99,9 +99,9 @@ class _HomePageState extends State<HomePage> {
                     title: const Text('Cart'),
                     onTap: () {
                       setState(() {
-                        _selectedIndex = 1; // Set to Cart
+                        _selectedIndex = 1;
                       });
-                      Navigator.of(context).pop(); // Close the Drawer
+                      Navigator.of(context).pop();
                     },
                   ),
                 ],
