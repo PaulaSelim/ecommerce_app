@@ -4,7 +4,7 @@ import '../modules/shoe.dart';
 // ignore: must_be_immutable
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
-  void Function()? onTap;
+  final void Function()? onTap;
   ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
