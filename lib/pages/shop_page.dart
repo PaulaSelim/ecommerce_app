@@ -92,21 +92,23 @@ class _ShopPageState extends State<ShopPage> {
           ),
 
           //list of shoes for sale
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.40,
-            child: ListView.builder(
-              itemCount: 4,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                // get a shoe from shop list
-                Shoe shoe = value.getShoeList()[index];
+          Scrollbar(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.40,
+              child: ListView.builder(
+                itemCount: 4,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  // get a shoe from shop list
+                  Shoe shoe = value.getShoeList()[index];
 
-                //return the shoe
-                return ShoeTile(
-                  shoe: shoe,
-                  onTap: () => addShoeToCart(shoe),
-                );
-              },
+                  //return the shoe
+                  return ShoeTile(
+                    shoe: shoe,
+                    onTap: () => addShoeToCart(shoe),
+                  );
+                },
+              ),
             ),
           ),
         ],
