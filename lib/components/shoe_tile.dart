@@ -10,7 +10,6 @@ class ShoeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 25.0),
-      //for responsiveness
       width: MediaQuery.of(context).size.width < 600
           ? MediaQuery.of(context).size.width * 0.75
           : 250,
