@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import '../modules/shoe.dart';
 
-// ignore: must_be_immutable
 class ShoeTile extends StatelessWidget {
-  Shoe shoe;
+  final Shoe shoe;
   final void Function()? onTap;
-  ShoeTile({super.key, required this.shoe, required this.onTap});
+  const ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
